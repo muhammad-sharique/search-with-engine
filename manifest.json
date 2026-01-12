@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Search with Engine",
+  "version": "1.0.0",
+  "description": "Select text on any page and search it with your preferred search engine",
+  "permissions": [
+    "contextMenus",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
