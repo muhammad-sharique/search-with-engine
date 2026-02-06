@@ -11,29 +11,7 @@ const SEARCH_ENGINES = {
 // Initialize context menu and icon on installation
 chrome.runtime.onInstalled.addListener(() => {
   createContextMenu();
-  updateExtensionIcon();
 });
-
-// Update extension icon based on search engine
-async function updateExtensionIcon() {
-  const result = await chrome.storage.sync.get(['searchEngine']);
-  const searchEngine = result.searchEngine || DEFAULT_SEARCH_ENGINE;
-  
-  // Set the extension icon
-  chrome.action.setIcon({
-    path: {
-      16: `assets/providers/${searchEngine}/icon16.png`,
-      32: `assets/providers/${searchEngine}/icon32.png`,
-      48: `assets/providers/${searchEngine}/icon48.png`,
-      128: `assets/providers/${searchEngine}/icon128.png`
-    }
-  });
-  
-  // Also update the title tooltip
-  chrome.action.setTitle({
-    title: `Search with ${searchEngine.charAt(0).toUpperCase() + searchEngine.slice(1)}`
-  });
-}
 
 // Create context menu item
 async function createContextMenu() {
@@ -75,6 +53,5 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
 chrome.storage.onChanged.addListener((changes, namespace) => {
   if (namespace === 'sync' && changes.searchEngine) {
     createContextMenu();
-    updateExtensionIcon();
   }
 });

@@ -12,10 +12,10 @@
     "default_popup": "",
     "default_title": "Search with Google",
     "default_icon": {
-      "16": "assets/providers/google/icon16.png",
-      "32": "assets/providers/google/icon32.png",
-      "48": "assets/providers/google/icon48.png",
-      "128": "assets/providers/google/icon128.png"
+      "16": "assets/icons/icon16.png",
+      "32": "assets/icons/icon32.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
     }
   },
   "background": {
@@ -26,9 +26,9 @@
     "open_in_tab": false
   },
   "icons": {
-    "16": "assets/providers/google/icon16.png",
-	"32": "assets/providers/google/icon32.png",
-    "48": "assets/providers/google/icon48.png",
-    "128": "assets/providers/google/icon128.png"
+    "16": "assets/icons/icon16.png",
+	"32": "assets/icons/icon32.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
   }
 }
